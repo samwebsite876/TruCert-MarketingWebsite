@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TruCert</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="floating-nav">
+
+    <a href="#home" class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="TruCert Logo">
+    </a>
+
+    <div class="nav-links">
+        <a href="#problem">Problem</a>
+        <a href="#about">Solution</a>
+        <a href="#how">How It Works</a>
+        <a href="#why">Why</a>
+        <a href="#about-us">Team</a>
+    </div>
+
+    <a href="#demo" class="nav-button">
+        Try Demo
+    </a>
+
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <!-- MAIN TEXT -->
+    <h1>Eliminate Degree Fraud</h1>
+
+    <h2>Verify Credentials Instantly</h2>
+
+    <p>
+        TruCert provides secure blockchain-powered degree verification
+        for institutions, employers, and graduates across Jamaica.
+    </p>
+
+    <!-- BUTTONS -->
+    <div class="hero-buttons">
+        <a class="cta primary-btn" href="#problem">
+            Learn More
+        </a>
+
+        <a class="cta secondary-btn" href="#demo">
+            Try Demo
+        </a>
+    </div>
+
+    <!-- SCROLL INDICATOR -->
+    <div class="scroll-indicator">
+        ↓ Scroll
+    </div>
+
+</section>
+
+<!-- PROBLEM -->
+<section class="problem-section" id="problem">
+
+    <h2>The Problem</h2>
+
+    <div class="problem-grid">
+
+        <div class="problem-card">
+            <h3>01</h3>
+
+            <p>
+                As it currently stands, employers rely on traditional methods
+                such as “word of mouth” or printed documents to verify
+                academic qualifications in Jamaica.
+            </p>
+        </div>
+
+        <div class="problem-card">
+            <h3>02</h3>
+
+            <p>
+                This outdated approach leaves room for fraudulent activity,
+                as individuals may present fake or altered degrees.
+            </p>
+        </div>
+
+        <div class="problem-card">
+            <h3>03</h3>
+
+            <p>
+                Without a secure verification system, organizations risk hiring
+                unqualified candidates, leading to reputational damage and
+                legal concerns.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SOLUTION -->
+<section id="about" class="solution-section">
+    <h2>Our Solution</h2>
+    <p>
+        TruCert is a blockchain-based system that allows universities to issue
+        secure digital certificates. These certificates are tamper-proof and
+        can be verified instantly from anywhere.
+    </p>
+</section>
+
+<!-- HOW -->
+<section id="how" class="how-section">
+    <h2>How It Works</h2>
+
+    <div class="grid">
+        <div>
+            <h3>1. Register</h3>
+            <p>Universities register and get approved.</p>
+        </div>
+        <div>
+            <h3>2. Issue</h3>
+            <p>Degrees are stored securely on blockchain.</p>
+        </div>
+        <div>
+            <h3>3. Receive</h3>
+            <p>Students receive their digital degrees.</p>
+        </div>
+        <div>
+            <h3>4. Verify</h3>
+            <p>Employers verify instantly using students credentials.</p>
+        </div>
+    </div>
+</section>
+
+<!-- WHY -->
+<section id="why" class="why-section">
+    <h2>Why Choose TruCert?</h2>
+
+    <div class="grid">
+        <div>
+            <h3>Secure</h3>
+            <p>Impossible to forge or alter certificates.</p>
+        </div>
+        <div>
+            <h3>Instant</h3>
+            <p>Verification happens in seconds.</p>
+        </div>
+        <div>
+            <h3>Global</h3>
+            <p>Works anywhere in the country.</p>
+        </div>
+        <div>
+            <h3>Permanent</h3>
+            <p>Records last forever.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ABOUT US -->
+<section id="about-us" class="team-section">
+    <h2>Meet the Team</h2>
+    <p class="subtitle">
+        The developers behind TruCert
+    </p>
+
+    <div class="team-grid">
+
+        <div class="team-card">
+            <img src="{{ url_for('static', filename='images/member1.jpg') }}" alt="Member 1">
+            <h3>Your Name</h3>
+            <p>Frontend Developer — Built the user interface and design.</p>
+        </div>
+
+        <div class="team-card">
+            <img src="{{ url_for('static', filename='images/member2.jpg') }}" alt="Member 2">
+            <h3>Teammate Name</h3>
+            <p>Backend Developer — Developed the API and database.</p>
+        </div>
+
+        <div class="team-card">
+            <img src="{{ url_for('static', filename='images/member3.jpg') }}" alt="Member 3">
+            <h3>Teammate Name</h3>
+            <p>Blockchain Developer — Implemented smart contracts.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- DEMO -->
+<section id="demo" class="demo section">
+    <h2>Try It Yourself</h2>
+    <p>Click below to test real certificate verification.</p>
+    <a class="cta" href="http://127.0.0.1:5173">Launch Demo</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 TruCert</p>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
