@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TruCert</title>
+    <title>TrueCert</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -15,188 +16,583 @@
 <nav class="floating-nav">
 
     <a href="#home" class="logo">
-        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="TruCert Logo">
+        <img src="{{ url_for('static', filename='images/logo1.png') }}" alt="TruCert Logo">
+
     </a>
 
     <div class="nav-links">
+          <a href="#about">About</a>
         <a href="#problem">Problem</a>
-        <a href="#about">Solution</a>
+        <a href="#solution">Solution</a>
+        <a href="#features">Features</a>
         <a href="#how">How It Works</a>
-        <a href="#why">Why</a>
-        <a href="#about-us">Team</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#about-us">Team</a> 
     </div>
 
-    <a href="#demo" class="nav-button">
-        Try Demo
-    </a>
+    <a href="#demo" class="nav-button">View Application</a>
 
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="home">
 
-    <!-- MAIN TEXT -->
-    <h1>Eliminate Degree Fraud</h1>
+    <div class="hero-content">
+        <h1>Eliminate Degree Fraud</h1>
 
-    <h2>Verify Credentials Instantly</h2>
+        <h2>Verify Credentials Instantly</h2>
 
-    <p>
-        TruCert provides secure blockchain-powered degree verification
-        for institutions, employers, and graduates across Jamaica.
+        <p>
+            TrueCert provides secure blockchain-powered degree verification
+            for institutions, employers, and graduates across Jamaica.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#about" class="btn-primary">Learn More</a>
+            <a href="#how" class="btn-secondary">How It Works</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/hero-image6.png') }}" alt="Blockchain verification graphic">
+    </div> 
+
+
+</section>  
+
+
+<!-- ABOUT SECTION -->
+<section class="about-section" id="about">
+
+    <div class="section-header">
+        <span class="section-label">About TruCert</span>
+        <h2>What is TrueCert?</h2>
+    </div>
+
+    <p class="section-intro">
+        TrueCert is a digital certificate verification platform that allows institutions 
+        to issue secure digital certificates and allows employers to verify them quickly. 
+        The system uses blockchain technology to help protect certificate records from 
+        being altered or forged.
     </p>
 
-    <!-- BUTTONS -->
-    <div class="hero-buttons">
-        <a class="cta primary-btn" href="#problem">
-            Learn More
-        </a>
+    <div class="about-grid">
 
-        <a class="cta secondary-btn" href="#demo">
-            Try Demo
-        </a>
+        <div class="about-card">
+               <div class="card-icon">
+               <i class="bi bi-file-earmark-check"></i>
+</div>
+            <h3>Secure Digital Certificates</h3>
+            <p>
+                Institutions can issue digital certificates that are easier to store, 
+                share, and verify.
+            </p>
+        </div>
+
+       <div class="about-card">
+    <div class="card-icon">
+        <i class="bi bi-link-45deg"></i>
     </div>
 
-    <!-- SCROLL INDICATOR -->
-    <div class="scroll-indicator">
-        ↓ Scroll
+    <h3>Blockchain-Based Verification</h3>
+
+    <p>
+        Certificate proof is recorded using blockchain technology to support 
+        tamper-resistant verification.
+    </p>
+
+    <button class="see-more-btn" onclick="openBlockchainModal()">
+        See More
+    </button>
+</div>
+
+        <div class="about-card">
+            <div class="card-icon">
+               <i class="bi bi-person-check"></i>
+            </div>
+            <h3>Fast Employer Checks</h3>
+            <p>
+                Employers can quickly confirm if a certificate is authentic without 
+                relying on slow manual checks.
+            </p>
+        </div>
+
     </div>
 
-</section>
+</section> 
 
-<!-- PROBLEM -->
+<!-- BLOCKCHAIN MODAL -->
+<div class="modal-overlay" id="blockchainModal">
+    <div class="modal-card">
+        <button class="modal-close" onclick="closeBlockchainModal()">
+            <i class="bi bi-x-lg"></i>
+        </button>
+
+        <div class="modal-icon">
+            <i class="bi bi-link-45deg"></i>
+        </div>
+
+        <h2>What is Blockchain Technology?</h2>
+
+        <p>
+            Blockchain is a digital record system that stores information in a way
+            that is difficult to change. Once information is added, it becomes part
+            of a secure record that can be checked later.
+        </p>
+
+        <p>
+            In TrueCert, blockchain is used to store proof that a certificate was
+            issued and has not been altered. This helps employers verify academic
+            credentials faster and with more confidence.
+        </p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- PROBLEM SECTION -->
 <section class="problem-section" id="problem">
 
-    <h2>The Problem</h2>
+    <div class="problem-container">
 
-    <div class="problem-grid">
+        <!-- LEFT TEXT AREA -->
+        <div class="problem-text">
+            <span class="section-label">The Problem</span>
 
-        <div class="problem-card">
-            <h3>01</h3>
+            <h2>Traditional Verification Is No Longer Enough</h2>
 
             <p>
-                As it currently stands, employers rely on traditional methods
-                such as “word of mouth” or printed documents to verify
-                academic qualifications in Jamaica.
+                Traditional certificate verification is often slow, manual, and unreliable.
+                Employers may have to contact institutions directly or depend on printed
+                documents, which can be altered, duplicated, or forged.
             </p>
+
+            <div class="problem-highlight">
+                <i class="bi bi-exclamation-triangle"></i>
+                <span>Degree fraud creates risk for employers, institutions, and graduates.</span>
+            </div>
         </div>
 
-        <div class="problem-card">
-            <h3>02</h3>
+        <!-- RIGHT CARD AREA -->
+        <div class="problem-cards">
 
-            <p>
-                This outdated approach leaves room for fraudulent activity,
-                as individuals may present fake or altered degrees.
-            </p>
-        </div>
+            <div class="problem-card">
+                <div class="problem-icon">
+                    <i class="bi bi-file-earmark-x"></i>
+                </div>
 
-        <div class="problem-card">
-            <h3>03</h3>
+                <div>
+                    <h3>Fake Certificates</h3>
+                    <p>
+                        Printed certificates can be forged or edited, making it difficult
+                        to confirm whether a qualification is real.
+                    </p>
+                </div>
+            </div>
 
-            <p>
-                Without a secure verification system, organizations risk hiring
-                unqualified candidates, leading to reputational damage and
-                legal concerns.
-            </p>
+            <div class="problem-card">
+                <div class="problem-icon">
+                    <i class="bi bi-hourglass-split"></i>
+                </div>
+
+                <div>
+                    <h3>Slow Verification</h3>
+                    <p>
+                        Manual checks can delay hiring and decision-making because employers
+                        often have to wait for institutional responses.
+                    </p>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-icon">
+                    <i class="bi bi-shield-exclamation"></i>
+                </div>
+
+                <div>
+                    <h3>Lack of Trust</h3>
+                    <p>
+                        Employers need a reliable way to confirm that qualifications are
+                        authentic and have not been altered.
+                    </p>
+                </div>
+            </div>
+
         </div>
 
     </div>
 
 </section>
 
-<!-- SOLUTION -->
-<section id="about" class="solution-section">
-    <h2>Our Solution</h2>
-    <p>
-        TruCert is a blockchain-based system that allows universities to issue
-        secure digital certificates. These certificates are tamper-proof and
-        can be verified instantly from anywhere.
-    </p>
-</section>
 
-<!-- HOW -->
-<section id="how" class="how-section">
-    <h2>How It Works</h2>
 
-    <div class="grid">
-        <div>
-            <h3>1. Register</h3>
-            <p>Universities register and get approved.</p>
+
+<!-- SOLUTION SECTION -->
+<section class="solution-section" id="solution">
+
+    <div class="solution-container">
+
+        <!-- LEFT IMAGE -->
+        <div class="solution-visual">
+            <img src="{{ url_for('static', filename='images/solute-image2.png') }}" alt="Puzzle piece representing a solution">
         </div>
-        <div>
-            <h3>2. Issue</h3>
-            <p>Degrees are stored securely on blockchain.</p>
+
+        <!-- RIGHT CONTENT -->
+        <div class="solution-content">
+            <span class="section-label">Our Solution</span>
+
+            <h2>A Smarter Way to Verify Academic Credentials</h2>
+
+            <p class="solution-intro">
+                TrueCert provides a secure platform where institutions can issue digital 
+                certificates and store proof of authenticity on the blockchain. This makes 
+                certificate verification faster, safer, and more reliable.
+            </p>
+
+            <div class="solution-points">
+
+                <div class="solution-point">
+                    <div class="solution-number">01</div>
+                    <div class="solution-text">
+                        <h3>Issue Certificates</h3>
+                        <p>
+                            Institutions can create and manage digital certificates in a more
+                            secure and efficient way.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="solution-point">
+                    <div class="solution-number">02</div>
+                    <div class="solution-text">
+                        <h3>Store Proof Securely</h3>
+                        <p>
+                            Certificate proof is recorded using blockchain technology,
+                            helping protect records from tampering or forgery.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="solution-point">
+                    <div class="solution-number">03</div>
+                    <div class="solution-text">
+                        <h3>Verify Instantly</h3>
+                        <p>
+                            Employers can confirm certificate authenticity quickly
+                            without relying on long manual verification processes.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div>
-            <h3>3. Receive</h3>
-            <p>Students receive their digital degrees.</p>
-        </div>
-        <div>
-            <h3>4. Verify</h3>
-            <p>Employers verify instantly using students credentials.</p>
-        </div>
+
     </div>
+
+</section> 
+
 </section>
+<!-- FEATURES SECTION -->
+<section class="features-section" id="features">
 
-<!-- WHY -->
-<section id="why" class="why-section">
-    <h2>Why Choose TruCert?</h2>
-
-    <div class="grid">
-        <div>
-            <h3>Secure</h3>
-            <p>Impossible to forge or alter certificates.</p>
-        </div>
-        <div>
-            <h3>Instant</h3>
-            <p>Verification happens in seconds.</p>
-        </div>
-        <div>
-            <h3>Global</h3>
-            <p>Works anywhere in the country.</p>
-        </div>
-        <div>
-            <h3>Permanent</h3>
-            <p>Records last forever.</p>
-        </div>
+    <div class="section-header">
+        <span class="section-label">Key Features</span>
+        <h2>What TrueCert Can Do</h2>
+        <p class="section-intro">
+            TrueCert provides the main tools needed to issue, manage, claim, and verify academic certificates securely.
+        </p>
     </div>
+
+    <div class="features-list">
+
+        <div class="feature-item">
+            <i class="bi bi-file-earmark-plus"></i>
+            <div>
+                <h3>Certificate Issuance</h3>
+                <p>Institutions can issue certificates digitally.</p>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <i class="bi bi-person-check"></i>
+            <div>
+                <h3>Student Certificate Claiming</h3>
+                <p>Students can access their issued certificates.</p>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <i class="bi bi-briefcase"></i>
+            <div>
+                <h3>Employer Verification Portal</h3>
+                <p>Employers can verify certificate authenticity.</p>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <i class="bi bi-cloud-upload"></i>
+            <div>
+                <h3>Batch Certificate Upload</h3>
+                <p>Institutions can upload multiple certificates at once.</p>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <i class="bi bi-speedometer2"></i>
+            <div>
+                <h3>Institution Dashboard</h3>
+                <p>Institutions can manage certificate records.</p>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <i class="bi bi-shield-check"></i>
+            <div>
+                <h3>Blockchain Authenticity Check</h3>
+                <p>The system checks certificate proof against the blockchain.</p>
+            </div>
+        </div>
+
+    </div>
+
 </section>
 
 
-<!-- ABOUT US -->
-<section id="about-us" class="team-section">
-    <h2>Meet the Team</h2>
-    <p class="subtitle">
-        The developers behind TruCert
-    </p>
+
+
+
+
+<!-- HOW IT WORKS SECTION -->
+<section class="how-section" id="how">
+
+    <div class="section-header">
+        <span class="section-label">How It Works</span>
+        <h2>How It Works</h2>
+        <p class="section-intro">
+            TrueCert follows a secure step-by-step process to issue, store, and verify
+            academic certificates in a faster and more reliable way.
+        </p>
+    </div>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-marker">
+                <span>01</span>
+            </div>
+            <div class="timeline-content">
+                <h3>Institution Issues a Certificate</h3>
+                <p>
+                    An institution creates and issues a digital certificate through the TrueCert platform.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-marker">
+                <span>02</span>
+            </div>
+            <div class="timeline-content">
+                <h3>Unique Hash Is Generated</h3>
+                <p>
+                    The system generates a unique cryptographic hash for the certificate.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-marker">
+                <span>03</span>
+            </div>
+            <div class="timeline-content">
+                <h3>Proof Is Stored on the Blockchain</h3>
+                <p>
+                    The certificate proof is securely recorded on the blockchain to support authenticity.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-marker">
+                <span>04</span>
+            </div>
+            <div class="timeline-content">
+                <h3>Student Receives or Claims Certificate</h3>
+                <p>
+                    The student can then receive or claim the issued digital certificate.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-marker">
+                <span>05</span>
+            </div>
+            <div class="timeline-content">
+                <h3>Employer Enters or Scans Details</h3>
+                <p>
+                    An employer enters the certificate details or scans the certificate to begin verification.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-marker">
+                <span>06</span>
+            </div>
+            <div class="timeline-content">
+                <h3>TrueCert Confirms Validity</h3>
+                <p>
+                    The platform checks the certificate record and confirms whether it is authentic and valid.
+                </p>
+            </div>
+        </div>
+
+    </div> 
+
+
+
+<!-- BENEFITS SECTION -->
+<section class="benefits-section" id="benefits">
+
+    <div class="section-header">
+        <span class="section-label">Benefits</span>
+        <h2>Why Use TrueCert?</h2>
+        <p class="section-intro">
+            TrueCert gives institutions, students, and employers a faster and more trusted
+            way to manage and verify academic credentials.
+        </p>
+    </div>
+
+    <div class="benefits-grid">
+
+        <div class="benefit-item">
+            <div class="benefit-image">
+                <img src="{{ url_for('static', filename='images/institution-benefit.png') }}" alt="Institution representative">
+            </div>
+
+            <div class="benefit-content">
+                <span>For Institutions</span>
+                <h3>Issue and Manage Certificates Securely</h3>
+                <p>
+                    Reduce manual verification work, issue secure digital certificates,
+                    and manage certificate records more efficiently.
+                </p>
+            </div>
+        </div>
+
+        <div class="benefit-item reverse">
+            <div class="benefit-image">
+                <img src="{{ url_for('static', filename='images/student-benefit.png') }}" alt="Student with digital certificate">
+            </div>
+
+            <div class="benefit-content">
+                <span>For Students</span>
+                <h3>Share Credentials With Confidence</h3>
+                <p>
+                    Access verified digital credentials and share academic achievements
+                    with employers or organizations more easily.
+                </p>
+            </div>
+        </div>
+
+        <div class="benefit-item">
+            <div class="benefit-image">
+                <img src="{{ url_for('static', filename='images/employer-benefit.png') }}" alt="Employer verifying a certificate">
+            </div>
+
+            <div class="benefit-content">
+                <span>For Employers</span>
+                <h3>Verify Qualifications Faster</h3>
+                <p>
+                    Confirm qualifications quickly, reduce the risk of hiring unqualified
+                    candidates, and make safer hiring decisions.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>    
+    
+
+
+
+
+
+
+
+<!-- TEAM SECTION -->
+<section class="team-section" id="about-us">
+
+    <div class="section-header">
+        <span class="section-label">Meet the Team</span>
+        <h2>Our Project Team</h2>
+        <p class="section-intro">
+            TrueCert was developed as a secure digital certificate verification system
+            designed to reduce degree fraud and improve trust in academic credentials.
+        </p>
+    </div>
 
     <div class="team-grid">
 
         <div class="team-card">
-            <img src="{{ url_for('static', filename='images/member1.jpg') }}" alt="Member 1">
-            <h3>Your Name</h3>
-            <p>Frontend Developer — Built the user interface and design.</p>
+            <img src="{{ url_for('static', filename='images/team-member-1.jpg') }}" alt="Team member photo">
+            <div class="team-card-body">
+                <h3>Member Name</h3>
+                <p class="team-role">Frontend Developer</p>
+                <p>
+                    Worked on the user interface, page layout, and responsive design
+                    for the TrueCert marketing website.
+                </p>
+            </div>
         </div>
 
         <div class="team-card">
-            <img src="{{ url_for('static', filename='images/member2.jpg') }}" alt="Member 2">
-            <h3>Teammate Name</h3>
-            <p>Backend Developer — Developed the API and database.</p>
+            <img src="{{ url_for('static', filename='images/team-member-2.jpg') }}" alt="Team member photo">
+            <div class="team-card-body">
+                <h3>Member Name</h3>
+                <p class="team-role">Backend Developer</p>
+                <p>
+                    Assisted with system logic, Flask routes, and project functionality.
+                </p>
+            </div>
         </div>
 
         <div class="team-card">
-            <img src="{{ url_for('static', filename='images/member3.jpg') }}" alt="Member 3">
-            <h3>Teammate Name</h3>
-            <p>Blockchain Developer — Implemented smart contracts.</p>
+            <img src="{{ url_for('static', filename='images/team-member-3.jpg') }}" alt="Team member photo">
+            <div class="team-card-body">
+                <h3>Member Name</h3>
+                <p class="team-role">Blockchain Developer</p>
+                <p>
+                    Worked on the blockchain verification concept and certificate authenticity process.
+                </p>
+            </div>
         </div>
 
     </div>
+
 </section>
 
-<!-- DEMO -->
-<section id="demo" class="demo section">
-    <h2>Try It Yourself</h2>
-    <p>Click below to test real certificate verification.</p>
-    <a class="cta" href="http://127.0.0.1:5173">Launch Demo</a>
+<!-- APP PREVIEW -->
+<section id="demo" class="app-preview-section">
+
+    <span class="section-label">App Preview</span>
+
+    <h2>Explore the TrueCert Application</h2>
+
+    <p>
+        View the application interface and see how TrueCert supports secure
+        certificate issuing, claiming, and verification.
+    </p>
+
+    <a class="cta" href="http://127.0.0.1:5173">App Preview</a>
+
 </section>
 
 <!-- FOOTER -->
@@ -207,3 +603,5 @@
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
+
+

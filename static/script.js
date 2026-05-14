@@ -25,4 +25,22 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 document.querySelectorAll(".fade").forEach(el => {
     observer.observe(el);
+}); 
+
+
+
+function openBlockchainModal() {
+    document.getElementById("blockchainModal").classList.add("show");
+}
+
+function closeBlockchainModal() {
+    document.getElementById("blockchainModal").classList.remove("show");
+}
+
+document.addEventListener("click", function (event) {
+    const modal = document.getElementById("blockchainModal");
+
+    if (event.target === modal) {
+        closeBlockchainModal();
+    }
 });
