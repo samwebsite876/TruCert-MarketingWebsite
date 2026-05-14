@@ -1,0 +1,8 @@
+services:
+  - type: static
+    name: tru-cert-marketing-site
+    env: static
+    branch: static
+    rootDir: .
+    buildCommand: ""
+    staticPublishPath: .
